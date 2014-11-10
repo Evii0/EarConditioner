@@ -57,6 +57,8 @@ function repeatInterval(){
 }
 
 //currently no allowances for double flats or double sharps
+//way too complicated, only need basic names for each interval
+//also, should always use lowest note as root of chord.
 function getIntervalName(){
     switch(upOrDown){
         case 0:
@@ -123,7 +125,7 @@ function getCorrespondingValue(){
 
 function checkGuess(){
     var inputValue = document.getElementsByName('guessBox')[0].value;
-    if(getIntervalName() == inputValue){
+    if(getIntervalName().toUpperCase() == inputValue.toUpperCase()){
         alert("Correct!");
         return;
     }
