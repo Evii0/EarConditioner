@@ -47,6 +47,14 @@ function playInterval3(){
 
     console.log(getIntervalName());
 }
+function repeatInterval(){
+    var aud = new Audio('PianoNotes-Chrotchets/' + fileNames[firstNote] +'.mp3');
+    var aud3 = new Audio('PianoNotes-Chrotchets/' + fileNames[secondNote] +'.mp3');
+    aud.play();
+    aud3.play();
+
+    console.log(getIntervalName());
+}
 
 //currently no allowances for double flats or double sharps
 function getIntervalName(){
@@ -111,4 +119,13 @@ function getCorrespondingValue(){
     else{
         return ((values.indexOf(secondLetter) - values.indexOf(firstLetter)) + 1);
     }
+}
+
+function checkGuess(){
+    var inputValue = document.getElementsByName('guessBox')[0].value;
+    if(getIntervalName() == inputValue){
+        alert("Correct!");
+        return;
+    }
+    alert("Wrong - "+getIntervalName() );
 }
