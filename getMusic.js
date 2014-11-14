@@ -62,47 +62,36 @@ function repeatInterval(){
 function getIntervalName(){
     switch(upOrDown){
         case 0:
-            //me being lazy, doesn't account for Diminished Seconds (changing this will probably require altering getCorrespondingValue())
             return "Perfect Unison";
         case 1:
-            if(getCorrespondingValue() == 1)return "Augmented Unison";
-            else return "Minor Second";
+            return "Minor Second";
         case 2:
-            if(getCorrespondingValue() == 2)return "Major Second";
-            else return "Diminished Third";
+            return "Major Second";
         case 3:
-            if(getCorrespondingValue() == 3)return "Minor Third";
-            else return "Augmented Second";
+            return "Minor Third";
         case 4:
-            if(getCorrespondingValue() == 3)return "Major Third";
-            else return "Diminished Fourth";
+            return "Major Third";
         case 5:
-            if(getCorrespondingValue() == 4)return "Perfect Fourth";
-            else return "Augmented Third";
+            return "Perfect Fourth";
         case 6:
             if(getCorrespondingValue() == 4)return "Augmented Fourth";
             else return "Diminished Fifth";
         case 7:
-            if(getCorrespondingValue() == 5)return "Perfect Fifth";
-            else return "Diminished Sixth";
+            return "Perfect Fifth";
         case 8:
-            if(getCorrespondingValue() == 6)return "Minor Sixth";
-            else return "Augmented Fifth";
+            return "Minor Sixth";
         case 9:
-            if(getCorrespondingValue() == 7)return "Diminished Seventh";
-            else return "Major Sixth";
+            return "Major Sixth";
         case 10:
-            if(getCorrespondingValue() == 7)return "Minor Seventh";
-            else return "Augmented Sixth";
+            return "Minor Seventh";
         case 11:
-            if(getCorrespondingValue() == 7)return "Major Seventh";
-            else return "Diminished Octave";
+            return "Major Seventh";
         case 12:
-            if(getCorrespondingValue() == 8)return "Perfect Octave";
-            else return "Augmented Seventh";
+            return "Perfect Octave";
     }
 }
 
+//not currently used, in theory works out enharmonically equivalent intervals
 function getCorrespondingValue(){
     var values = ['C', 'D', 'E', 'F', 'G', 'A', 'B'];
     var firstLetter = fileNames[firstNote].substring(0,1);
