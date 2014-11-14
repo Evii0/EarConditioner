@@ -12,7 +12,7 @@ var maxInterval = 12;
 var upOrDown = 0;
 
 function playInterval(){
-    firstNote = Math.floor((Math.random() * 49)+ 1);
+    firstNote = Math.floor((Math.random() * 48)+ 1);
     var aud = new Audio('PianoNotes-Chrotchets/' + fileNames[firstNote] +'.mp3');
     console.log('note: ' + fileNames[firstNote] + ' number: ' + firstNote);
     aud.play();
