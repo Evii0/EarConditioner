@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head lang="en">
+    <script type = "text/javascript" src = "RhythmDictation.js"></script>
     <meta charset="UTF-8">
     <title>Rhythm Dictation</title>
     <Style>
@@ -18,16 +19,29 @@
             text-align:center;
             padding:5px;
         }
+
+        #content{
+            text-align: center;
+            padding-top: 50px;
+        }
     </Style>
 </head>
-<body>
+<body onload = "pageLoad()">
 
 <div id="back">
-    <a href="MainScreen.html"><h3>Home</h3></a>
+    <a href="../MainScreen.html"><h3>Home</h3></a>
 </div>
 
 <div id="title">
     <h1>Rhythm Dictation</h1>
+</div>
+
+<div id="content">
+    <canvas id="canvas" width="800" height="200" style="border:2px solid #d3d3d3;">
+        Your browser does not support the HTML5 canvas tag.
+    </canvas>
+    <br>
+    <button type="button" onclick="playRhythm()">Play A Rhythm!</button>
 </div>
 
 </body>

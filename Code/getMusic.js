@@ -73,6 +73,7 @@ function getIntervalName(){
             return "Major Third";
         case 5:
             return "Perfect Fourth";
+        //this most likely needs to go away, 6 really shouldn't be generated at all.
         case 6:
             if(getCorrespondingValue() == 4)return "Augmented Fourth";
             else return "Diminished Fifth";
